@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通用视图</title>
+</head>
+<body>
+博客表：
+{% for a in blog_list %}
+    <li>id：{{ a.id }}   标题：<a href="/detail/{{ a.id }}" target="{{a.id}}_blank">{{ a.title }}</a>       内容：{{ a.content }}</li>
+{% endfor %}
+<br>
+学生表：
+{% for a in student_list %}
+    <li>id：{{ a.id }}</li>
+    <li>姓名：{{ a.name }}</li>
+{% endfor %}
+</body>
+</html>
